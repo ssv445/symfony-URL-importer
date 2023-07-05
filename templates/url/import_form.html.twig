@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}URL Importer{% endblock %}
+
+{% block body %}
+    <h1>URL Importer</h1>
+
+    <form action="{{path('url_import') }}" method="post" enctype="multipart/form-data">
+        <div>
+            <label for="csv_file">CSV File:</label>
+            <input type="file" id="csv_file" name="csv_file" required>
+        </div>
+        <div>
+            <button type="submit">Import</button>
+        </div>
+    </form>
+{% endblock %}

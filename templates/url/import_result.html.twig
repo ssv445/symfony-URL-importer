@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Import Result{% endblock %}
+
+{% block body %}
+    <h1>Import Result</h1>
+
+    {% if addedUrls > 0 %}
+        <p>{{ addedUrls }} URLs have been added to the table.</p>
+    {% else %}
+        <p>No new URLs have been added.</p>
+    {% endif %}
+
+    <h3>Time Take: {{timeTaken}} ms.</h3>
+{% endblock %}
